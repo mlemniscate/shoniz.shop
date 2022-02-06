@@ -1,4 +1,6 @@
-﻿using shoniz.shop.CustomerContext.Domain.Customers.Services;
+﻿using shoniz.Framework.Core;
+using shoniz.Framework.Domain;
+using shoniz.shop.CustomerContext.Domain.Customers.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +10,14 @@ using System.Threading.Tasks;
 
 namespace shoniz.shop.CustomerContext.Domain.Customers
 {
-    class Customer
+    class Customer : EntityBase
     {
         private readonly INationalCodeDuplicationChecker nationalCodeDuplicateChecker;
-        public Customer(INationalCodeDuplicationChecker nationalCodeDuplicateChecker,
+        private readonly IHashProvider hashProvider;
+
+        public Customer(
+            INationalCodeDuplicationChecker nationalCodeDuplicateChecker,
+            IHashProvider hashProvider,
             string nationalCode,
             string email,
             string password,
@@ -19,13 +25,12 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
             string lastName)
         {
             this.nationalCodeDuplicateChecker = nationalCodeDuplicateChecker;
+            this.hashProvider = hashProvider;
             SetNationalCode(nationalCode);
             SetEmail(email);
             SetPassword(password);
             SetName(firstName, lastName);
         }
-
-        
 
         public string NationalCode { get; private set; }
         public string Email { get; private set; }
@@ -89,7 +94,7 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
             {
                 //
             }
-            Password = password;
+            Password = hashProvider.Hash(password, Id.ToString());
         }
     }
 }
