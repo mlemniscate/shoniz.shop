@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shoniz.shop.CustomerContext.Domain.Customers.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,8 +10,15 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
 {
     class Customer
     {
-        public Customer(string nationalCode, string email, string password, string firstName, string lastName)
+        private readonly INationalCodeDuplicationChecker nationalCodeDuplicateChecker;
+        public Customer(INationalCodeDuplicationChecker nationalCodeDuplicateChecker,
+            string nationalCode,
+            string email,
+            string password,
+            string firstName,
+            string lastName)
         {
+            this.nationalCodeDuplicateChecker = nationalCodeDuplicateChecker;
             SetNationalCode(nationalCode);
             SetEmail(email);
             SetPassword(password);
@@ -34,12 +42,17 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
 
             if (nationalCode.Length < 10)
             {
-
+                // InvalidNationalCodeException
             }
 
-            if(nationalCode.All(c=> !char.IsDigit(c)))
+            if(nationalCode.All(c=>!char.IsDigit(c)))
             {
+                //
+            }
 
+            if(nationalCodeDuplicateChecker.IsDuplicated(nationalCode))
+            {
+                // DuplicatedNationalCodeException
             }
 
             NationalCode = nationalCode;
@@ -68,7 +81,14 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
 
         private void SetPassword(string password)
         {
-            //validate
+            if(string.IsNullOrWhiteSpace(password))
+            {
+                //
+            }
+            if(password.Length < 6)
+            {
+                //
+            }
             Password = password;
         }
     }

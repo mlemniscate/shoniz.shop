@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Customers\Customer.cs" />
     <Compile Include="Customers\Exceptions\NationalCodeRequiredException.cs" />
+    <Compile Include="Customers\Services\INationalCodeDuplicationChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,5 +56,6 @@
       <Name>shoniz.shop.CustomerContext.Resources</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
