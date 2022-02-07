@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1F9A6A07-837D-451D-A68D-4D6D52C913EE}</ProjectGuid>
+    <ProjectGuid>{5BA8ABF6-B103-49D6-BB51-67945F652AD8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>shoniz.shop.CustomerContext.Domain</RootNamespace>
-    <AssemblyName>shoniz.shop.CustomerContext.Domain</AssemblyName>
+    <RootNamespace>Shoniz.Framework.ApplicationService</RootNamespace>
+    <AssemblyName>Shoniz.Framework.ApplicationService</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,26 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customers\Customer.cs" />
-    <Compile Include="Customers\Exceptions\NationalCodeRequiredException.cs" />
-    <Compile Include="Customers\Services\ICustomerRepository.cs" />
-    <Compile Include="Customers\Services\INationalCodeDuplicationChecker.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="ICommandHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\shoniz.Framework.Core\shoniz.Framework.Core.csproj">
-      <Project>{CBE9861E-4A61-48DF-9F94-570EBDA530C0}</Project>
-      <Name>shoniz.Framework.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\shoniz.Framework.Domain\shoniz.Framework.Domain.csproj">
-      <Project>{D7685446-EFD6-45E9-A0A4-8BBE3C6505D8}</Project>
-      <Name>shoniz.Framework.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\shoniz.shop.CustomerContext.Resources\shoniz.shop.CustomerContext.Resources.csproj">
-      <Project>{12515803-2ebb-409b-8f74-ae969a713db5}</Project>
-      <Name>shoniz.shop.CustomerContext.Resources</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
