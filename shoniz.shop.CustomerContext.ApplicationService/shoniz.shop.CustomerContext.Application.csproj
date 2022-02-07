@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customers\AddAddressCommandHandler.cs" />
     <Compile Include="Customers\SignupCommandHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,6 +53,10 @@
     <ProjectReference Include="..\shoniz.Framework.Core\shoniz.Framework.Core.csproj">
       <Project>{CBE9861E-4A61-48DF-9F94-570EBDA530C0}</Project>
       <Name>shoniz.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\shoniz.Framework.Domain\shoniz.Framework.Domain.csproj">
+      <Project>{D7685446-EFD6-45E9-A0A4-8BBE3C6505D8}</Project>
+      <Name>shoniz.Framework.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\shoniz.shop.CustomerContext.ApplicationService.Contracts\shoniz.shop.CustomerContext.Application.Contracts.csproj">
       <Project>{25157e82-583d-49df-9e95-9ab284ca2202}</Project>

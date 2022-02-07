@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customers\Address.cs" />
     <Compile Include="Customers\Customer.cs" />
     <Compile Include="Customers\Exceptions\NationalCodeRequiredException.cs" />
     <Compile Include="Customers\Services\ICustomerRepository.cs" />

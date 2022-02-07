@@ -4,10 +4,10 @@ namespace shoniz.Framework.Domain
 {
     public abstract class EntityBase
     {
-        protected EntityBase()
+        public EntityBase()
         {
             Id = Guid.NewGuid();
         }
-        public Guid Id { get; private set; }
+        public Guid Id { get; set; }
     }
 }

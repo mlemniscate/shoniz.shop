@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace shoniz.shop.CustomerContext.Domain.Customers
 {
-
     public class Customer : EntityBase
     {
         private readonly INationalCodeDuplicationChecker nationalCodeDuplicateChecker;
@@ -23,7 +22,7 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
             string email,
             string password,
             string firstName,
-            string lastName)
+            string lastName) : base()
         {
             this.nationalCodeDuplicateChecker = nationalCodeDuplicateChecker;
             this.hashProvider = hashProvider;
@@ -31,6 +30,7 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
             SetEmail(email);
             SetPassword(password);
             SetName(firstName, lastName);
+            
         }
 
         public string NationalCode { get; private set; }
@@ -38,6 +38,12 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
         public string Password { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
+        public ICollection<Address> Addresses { get; private set; }
+
+        public void AddAddress(Address address)
+        {
+            Addresses.Add(address);
+        }
 
         private void SetNationalCode(string nationalCode)
         {
