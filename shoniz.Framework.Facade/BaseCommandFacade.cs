@@ -8,6 +8,7 @@ namespace shoniz.Framework.Facade
         { 
             CommandBus = commandBus;
         }
+
         protected ICommandBus CommandBus { get; }
     }
 }

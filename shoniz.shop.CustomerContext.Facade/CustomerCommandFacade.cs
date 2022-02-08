@@ -6,7 +6,7 @@ using Shoniz.Framework.ApplicationService;
 
 namespace shoniz.shop.CustomerContext.Facade
 {
-    public class CustomerCommandFacade : BaseCommandFacade, ICustomerCommandFacade
+    public class CustomerCommandFacade : BaseCommandFacade
     {
         public CustomerCommandFacade(ICommandBus commandBus) : base(commandBus)
         {
