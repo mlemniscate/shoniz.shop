@@ -1,4 +1,6 @@
-﻿namespace Shoniz.Framework.ApplicationService
+﻿using shoniz.Framework.Core.Application;
+
+namespace Shoniz.Framework.ApplicationService
 {
     public interface ICommandHandler<TCommand> where TCommand : Command
     {

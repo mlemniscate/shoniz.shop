@@ -1,6 +1,6 @@
 ﻿namespace shoniz.Framework.Core.DependencyInjection
 {
-    public static class ServiceLockator
+    public static class ServiceLocator
     {
         public static IDiContainer Current { get; private set; }
         public static void Initial(IDiContainer container)

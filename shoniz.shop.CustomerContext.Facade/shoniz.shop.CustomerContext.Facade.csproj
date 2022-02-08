@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CBE9861E-4A61-48DF-9F94-570EBDA530C0}</ProjectGuid>
+    <ProjectGuid>{2BF56A97-B5C9-44E8-B33D-9C3A2BE100B5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>shoniz.Framework.Core</RootNamespace>
-    <AssemblyName>shoniz.Framework.Core</AssemblyName>
+    <RootNamespace>shoniz.shop.CustomerContext.Facade</RootNamespace>
+    <AssemblyName>shoniz.shop.CustomerContext.Facade</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,13 +41,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\Command.cs" />
-    <Compile Include="Application\ICommandBus.cs" />
-    <Compile Include="DependencyInjection\IDiContainer.cs" />
-    <Compile Include="DependencyInjection\ServiceLocator.cs" />
-    <Compile Include="Security\IHashProvider.cs" />
+    <Compile Include="CustomerCommandFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Shoniz.Framework.ApplicationService\shoniz.Framework.Application.csproj">
+      <Project>{5BA8ABF6-B103-49D6-BB51-67945F652AD8}</Project>
+      <Name>shoniz.Framework.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\shoniz.Framework.Core\shoniz.Framework.Core.csproj">
+      <Project>{CBE9861E-4A61-48DF-9F94-570EBDA530C0}</Project>
+      <Name>shoniz.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\shoniz.Framework.Facade\shoniz.Framework.Facade.csproj">
+      <Project>{621F2CBD-57E5-48DF-BBD7-235831E6A5CE}</Project>
+      <Name>shoniz.Framework.Facade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\shoniz.shop.CustomerContext.ApplicationService.Contracts\shoniz.shop.CustomerContext.Application.Contracts.csproj">
+      <Project>{25157E82-583D-49DF-9E95-9AB284CA2202}</Project>
+      <Name>shoniz.shop.CustomerContext.Application.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,6 +33,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shoniz.Framework.Applicatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shoniz.Framework.DependencyInjection", "shoniz.Framework.DependencyInjection\shoniz.Framework.DependencyInjection.csproj", "{9ADA1E31-F8D8-4E42-A43C-BC388F635F75}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facade", "Facade", "{DD3551BB-617B-49B0-8305-B091FF378913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shoniz.shop.CustomerContext.Facade", "shoniz.shop.CustomerContext.Facade\shoniz.shop.CustomerContext.Facade.csproj", "{2BF56A97-B5C9-44E8-B33D-9C3A2BE100B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shoniz.Framework.Facade", "shoniz.Framework.Facade\shoniz.Framework.Facade.csproj", "{621F2CBD-57E5-48DF-BBD7-235831E6A5CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shoniz.shop.CustomerContext.Facade.Contracts", "shoniz.shop.CustomerContext.Facade.Contracts\shoniz.shop.CustomerContext.Facade.Contracts.csproj", "{5A0575C5-1C8F-4615-B1AD-D6E5854074DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +83,18 @@ Global
 		{9ADA1E31-F8D8-4E42-A43C-BC388F635F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ADA1E31-F8D8-4E42-A43C-BC388F635F75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ADA1E31-F8D8-4E42-A43C-BC388F635F75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BF56A97-B5C9-44E8-B33D-9C3A2BE100B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BF56A97-B5C9-44E8-B33D-9C3A2BE100B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BF56A97-B5C9-44E8-B33D-9C3A2BE100B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BF56A97-B5C9-44E8-B33D-9C3A2BE100B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{621F2CBD-57E5-48DF-BBD7-235831E6A5CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621F2CBD-57E5-48DF-BBD7-235831E6A5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621F2CBD-57E5-48DF-BBD7-235831E6A5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621F2CBD-57E5-48DF-BBD7-235831E6A5CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0575C5-1C8F-4615-B1AD-D6E5854074DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0575C5-1C8F-4615-B1AD-D6E5854074DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0575C5-1C8F-4615-B1AD-D6E5854074DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0575C5-1C8F-4615-B1AD-D6E5854074DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +112,10 @@ Global
 		{25157E82-583D-49DF-9E95-9AB284CA2202} = {86C99DD9-08F0-4CE8-80C7-C3D2070572FB}
 		{5BA8ABF6-B103-49D6-BB51-67945F652AD8} = {CE584956-AB41-4288-A926-DAA98091FEC2}
 		{9ADA1E31-F8D8-4E42-A43C-BC388F635F75} = {CE584956-AB41-4288-A926-DAA98091FEC2}
+		{DD3551BB-617B-49B0-8305-B091FF378913} = {DA4DAB7E-A0C2-4FA8-B5A4-F3BA28A7825A}
+		{2BF56A97-B5C9-44E8-B33D-9C3A2BE100B5} = {DD3551BB-617B-49B0-8305-B091FF378913}
+		{621F2CBD-57E5-48DF-BBD7-235831E6A5CE} = {CE584956-AB41-4288-A926-DAA98091FEC2}
+		{5A0575C5-1C8F-4615-B1AD-D6E5854074DB} = {DD3551BB-617B-49B0-8305-B091FF378913}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6BACEFB5-5168-4502-A89E-078B4FC7A97A}

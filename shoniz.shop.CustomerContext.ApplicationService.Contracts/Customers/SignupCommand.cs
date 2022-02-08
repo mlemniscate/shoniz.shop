@@ -1,4 +1,4 @@
-﻿using Shoniz.Framework.ApplicationService;
+﻿using shoniz.Framework.Core.Application;
 
 namespace shoniz.shop.CustomerContext.ApplicationService.Contracts.Customers
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Shoniz.Framework.ApplicationService
+namespace shoniz.Framework.Core.Application
 {
     public abstract class Command
     {

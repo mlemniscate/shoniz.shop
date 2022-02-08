@@ -50,6 +50,10 @@
       <Project>{5BA8ABF6-B103-49D6-BB51-67945F652AD8}</Project>
       <Name>shoniz.Framework.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\shoniz.Framework.Core\shoniz.Framework.Core.csproj">
+      <Project>{CBE9861E-4A61-48DF-9F94-570EBDA530C0}</Project>
+      <Name>shoniz.Framework.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

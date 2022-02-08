@@ -41,9 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command.cs" />
+    <Compile Include="CommandBus.cs" />
     <Compile Include="ICommandHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\shoniz.Framework.Core\shoniz.Framework.Core.csproj">
+      <Project>{CBE9861E-4A61-48DF-9F94-570EBDA530C0}</Project>
+      <Name>shoniz.Framework.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
