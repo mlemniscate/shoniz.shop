@@ -1,6 +1,6 @@
 ﻿using Castle.Windsor;
 using shoniz.Framework.Core.DependencyInjection;
- 
+
 namespace shoniz.Framework.DependencyInjection
 {
     class DiContainer : IDiContainer
