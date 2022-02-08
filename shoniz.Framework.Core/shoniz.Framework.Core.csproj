@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyInjection\IDiContainer.cs" />
+    <Compile Include="DependencyInjection\ServiceLockator.cs" />
     <Compile Include="Security\IHashProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

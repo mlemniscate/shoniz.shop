@@ -46,9 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shoniz.Framework.ApplicationService\Shoniz.Framework.Application.csproj">
+    <ProjectReference Include="..\Shoniz.Framework.ApplicationService\shoniz.Framework.Application.csproj">
       <Project>{5BA8ABF6-B103-49D6-BB51-67945F652AD8}</Project>
-      <Name>Shoniz.Framework.Application</Name>
+      <Name>shoniz.Framework.Application</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

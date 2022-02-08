@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C947FFD-97C3-48F1-9F5F-1FA1A4BA3436}</ProjectGuid>
+    <ProjectGuid>{9ADA1E31-F8D8-4E42-A43C-BC388F635F75}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>shoniz.shop.CustomerContext.ApplicationService</RootNamespace>
-    <AssemblyName>shoniz.shop.CustomerContext.ApplicationService</AssemblyName>
+    <RootNamespace>shoniz.Framework.DependencyInjection</RootNamespace>
+    <AssemblyName>shoniz.Framework.DependencyInjection</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,8 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.4.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=5.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.5.1.1\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,30 +50,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customers\AddAddressCommandHandler.cs" />
-    <Compile Include="Customers\SignupCommandHandler.cs" />
+    <Compile Include="DiContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shoniz.Framework.ApplicationService\shoniz.Framework.Application.csproj">
-      <Project>{5BA8ABF6-B103-49D6-BB51-67945F652AD8}</Project>
-      <Name>shoniz.Framework.Application</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\shoniz.Framework.Core\shoniz.Framework.Core.csproj">
       <Project>{CBE9861E-4A61-48DF-9F94-570EBDA530C0}</Project>
       <Name>shoniz.Framework.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\shoniz.Framework.Domain\shoniz.Framework.Domain.csproj">
-      <Project>{D7685446-EFD6-45E9-A0A4-8BBE3C6505D8}</Project>
-      <Name>shoniz.Framework.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\shoniz.shop.CustomerContext.ApplicationService.Contracts\shoniz.shop.CustomerContext.Application.Contracts.csproj">
-      <Project>{25157e82-583d-49df-9e95-9ab284ca2202}</Project>
-      <Name>shoniz.shop.CustomerContext.Application.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\shoniz.shop.CustomerContext.Domain\shoniz.shop.CustomerContext.Domain.csproj">
-      <Project>{1F9A6A07-837D-451D-A68D-4D6D52C913EE}</Project>
-      <Name>shoniz.shop.CustomerContext.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
