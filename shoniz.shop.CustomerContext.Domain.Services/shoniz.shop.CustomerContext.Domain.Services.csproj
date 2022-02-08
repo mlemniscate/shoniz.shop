@@ -41,10 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customers\NationalCodeDuplicationChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Customers\" />
+    <ProjectReference Include="..\shoniz.Framework.Domain\shoniz.Framework.Domain.csproj">
+      <Project>{D7685446-EFD6-45E9-A0A4-8BBE3C6505D8}</Project>
+      <Name>shoniz.Framework.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\shoniz.shop.CustomerContext.Domain\shoniz.shop.CustomerContext.Domain.csproj">
+      <Project>{1F9A6A07-837D-451D-A68D-4D6D52C913EE}</Project>
+      <Name>shoniz.shop.CustomerContext.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

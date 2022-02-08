@@ -66,6 +66,10 @@
       <Project>{9ADA1E31-F8D8-4E42-A43C-BC388F635F75}</Project>
       <Name>shoniz.Framework.DependencyInjection</Name>
     </ProjectReference>
+    <ProjectReference Include="..\shoniz.Framework.Domain\shoniz.Framework.Domain.csproj">
+      <Project>{D7685446-EFD6-45E9-A0A4-8BBE3C6505D8}</Project>
+      <Name>shoniz.Framework.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\shoniz.Framework.Facade\shoniz.Framework.Facade.csproj">
       <Project>{621F2CBD-57E5-48DF-BBD7-235831E6A5CE}</Project>
       <Name>shoniz.Framework.Facade</Name>
@@ -77,6 +81,10 @@
     <ProjectReference Include="..\shoniz.shop.CustomerContext.ApplicationService\shoniz.shop.CustomerContext.Application.csproj">
       <Project>{8C947FFD-97C3-48F1-9F5F-1FA1A4BA3436}</Project>
       <Name>shoniz.shop.CustomerContext.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\shoniz.shop.CustomerContext.Domain.Services\shoniz.shop.CustomerContext.Domain.Services.csproj">
+      <Project>{323F7E86-EDA2-44A7-A32A-82E2B6C27240}</Project>
+      <Name>shoniz.shop.CustomerContext.Domain.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\shoniz.shop.CustomerContext.Facade\shoniz.shop.CustomerContext.Facade.csproj">
       <Project>{2BF56A97-B5C9-44E8-B33D-9C3A2BE100B5}</Project>

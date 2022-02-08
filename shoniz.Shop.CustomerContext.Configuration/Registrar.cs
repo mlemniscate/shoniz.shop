@@ -2,9 +2,11 @@
 using Castle.Windsor;
 using shoniz.Framework.Core;
 using shoniz.Framework.DependencyInjection;
+using shoniz.Framework.Domain;
 using shoniz.Framework.Facade;
 using shoniz.Framework.Security;
 using shoniz.shop.CustomerContext.ApplicationService.Customers;
+using shoniz.shop.CustomerContext.Domain.Services.Customers;
 using shoniz.shop.CustomerContext.Facade;
 using Shoniz.Framework.ApplicationService;
 
@@ -29,6 +31,12 @@ namespace shoniz.Shop.CustomerContext.Configuration
                 .BasedOn(typeof(BaseCommandFacade))
                 .WithServiceAllInterfaces()
                 .LifestyleTransient());
+            container.Register(
+                Classes.FromAssemblyContaining<NationalCodeDuplicationChecker>()
+                .BasedOn<IDomainService>()
+                .WithServiceAllInterfaces()
+                .LifestyleTransient());
+
         }
     }
 }
