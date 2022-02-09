@@ -11,6 +11,6 @@ namespace shoniz.shop.CustomerContext.Domain.Customers.Services
 
         void Update(Customer customer);
 
-        bool Contains(Expression<Func<Customer, bool>> predicate)
+        bool Contains(Expression<Func<Customer, bool>> predicate);
     }
 }

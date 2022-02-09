@@ -14,11 +14,18 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
         }
 
         public string PostalCode { get; private set; }
+
         public string AddressLine { get; private set; }
+
         public int CityId { get; private set; }
+
         public Guid CustomerId { get; private set; }
+
         public string Telephone { get; set; }
+
         public string Coordinate { get; set; }
+
+        public Customer Customer { get; set; }
 
         private void SetAddressLine(string addressLine)
         {
