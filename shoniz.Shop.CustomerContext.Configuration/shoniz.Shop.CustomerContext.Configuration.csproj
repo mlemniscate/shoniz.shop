@@ -74,6 +74,10 @@
       <Project>{621F2CBD-57E5-48DF-BBD7-235831E6A5CE}</Project>
       <Name>shoniz.Framework.Facade</Name>
     </ProjectReference>
+    <ProjectReference Include="..\shoniz.Framework.Persistance\shoniz.Framework.Persistance.csproj">
+      <Project>{2AC81CF9-7FD4-4185-84D6-02A8E3AC1689}</Project>
+      <Name>shoniz.Framework.Persistance</Name>
+    </ProjectReference>
     <ProjectReference Include="..\shoniz.Framework.Security\shoniz.Framework.Security.csproj">
       <Project>{A6EC4A72-5412-4839-A8AA-C1971497B896}</Project>
       <Name>shoniz.Framework.Security</Name>
@@ -89,6 +93,10 @@
     <ProjectReference Include="..\shoniz.shop.CustomerContext.Facade\shoniz.shop.CustomerContext.Facade.csproj">
       <Project>{2BF56A97-B5C9-44E8-B33D-9C3A2BE100B5}</Project>
       <Name>shoniz.shop.CustomerContext.Facade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\shoniz.shop.CustomerContext.Infrastructure.Persistance\shoniz.shop.CustomerContext.Infrastructure.Persistance.csproj">
+      <Project>{8A8B7190-DC92-414D-A9A4-8CAEF0EB1F4C}</Project>
+      <Name>shoniz.shop.CustomerContext.Infrastructure.Persistance</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8A8B7190-DC92-414D-A9A4-8CAEF0EB1F4C}</ProjectGuid>
+    <ProjectGuid>{BEEB7B9F-E3FE-4074-93DA-06FFE5AEDD5D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>shoniz.shop.CustomerContext.Infrastructure.Persistance</RootNamespace>
-    <AssemblyName>shoniz.shop.CustomerContext.Infrastructure.Persistance</AssemblyName>
+    <RootNamespace>shoniz.shop.Persistence</RootNamespace>
+    <AssemblyName>shoniz.shop.Persistence</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -42,6 +42,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,9 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customers\CustomerRepository.cs" />
-    <Compile Include="Customers\Mappings\AddressMapping.cs" />
-    <Compile Include="Customers\Mappings\CustomerMapping.cs" />
+    <Compile Include="Migrations\202202130606119_CustomerAggrigteAdded.cs" />
+    <Compile Include="Migrations\202202130606119_CustomerAggrigteAdded.designer.cs">
+      <DependentUpon>202202130606119_CustomerAggrigteAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ShopDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,18 +65,23 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\shoniz.Framework.Domain\shoniz.Framework.Domain.csproj">
-      <Project>{D7685446-EFD6-45E9-A0A4-8BBE3C6505D8}</Project>
-      <Name>shoniz.Framework.Domain</Name>
+    <ProjectReference Include="..\shoniz.Framework.Core\shoniz.Framework.Core.csproj">
+      <Project>{cbe9861e-4a61-48df-9f94-570ebda530c0}</Project>
+      <Name>shoniz.Framework.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\shoniz.Framework.Persistance\shoniz.Framework.Persistance.csproj">
       <Project>{2AC81CF9-7FD4-4185-84D6-02A8E3AC1689}</Project>
       <Name>shoniz.Framework.Persistance</Name>
     </ProjectReference>
-    <ProjectReference Include="..\shoniz.shop.CustomerContext.Domain\shoniz.shop.CustomerContext.Domain.csproj">
-      <Project>{1F9A6A07-837D-451D-A68D-4D6D52C913EE}</Project>
-      <Name>shoniz.shop.CustomerContext.Domain</Name>
+    <ProjectReference Include="..\shoniz.shop.CustomerContext.Infrastructure.Persistance\shoniz.shop.CustomerContext.Infrastructure.Persistance.csproj">
+      <Project>{8A8B7190-DC92-414D-A9A4-8CAEF0EB1F4C}</Project>
+      <Name>shoniz.shop.CustomerContext.Infrastructure.Persistance</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202202130606119_CustomerAggrigteAdded.resx">
+      <DependentUpon>202202130606119_CustomerAggrigteAdded.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

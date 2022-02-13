@@ -4,7 +4,10 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace shoniz.Framework.Persistance
 {
-    public abstract class EntityMappingBase<TEntity> : EntityTypeConfiguration<TEntity> where TEntity : EntityBase
+    public abstract class EntityMappingBase<TEntity> : 
+        EntityTypeConfiguration<TEntity>,
+        IEntityMapping
+        where TEntity : EntityBase
     {
         protected EntityMappingBase()
         {
