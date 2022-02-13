@@ -45,6 +45,7 @@
     <Compile Include="Application\ICommandBus.cs" />
     <Compile Include="DependencyInjection\IDiContainer.cs" />
     <Compile Include="DependencyInjection\ServiceLocator.cs" />
+    <Compile Include="Persistance\IRepository.cs" />
     <Compile Include="Security\IHashProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

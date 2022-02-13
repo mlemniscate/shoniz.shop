@@ -28,7 +28,7 @@ namespace shoniz.shop.CustomerContext.ApplicationService.Customers
             address.Celphone = command.Telephone;
             customer.AddAddress(address);
 
-            customerRepository.Update(customer); 
+            customerRepository.Update(customer);
         }
     }
 }

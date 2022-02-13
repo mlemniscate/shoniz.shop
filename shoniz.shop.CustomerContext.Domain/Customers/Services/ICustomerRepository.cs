@@ -1,9 +1,10 @@
-﻿using System;
+﻿using shoniz.Framework.Core.Persistance;
+using System;
 using System.Linq.Expressions;
 
 namespace shoniz.shop.CustomerContext.Domain.Customers.Services
 {
-    public interface ICustomerRepository
+    public interface ICustomerRepository : IRepository
     {
         void CreateCustomer(Customer customer);
 
