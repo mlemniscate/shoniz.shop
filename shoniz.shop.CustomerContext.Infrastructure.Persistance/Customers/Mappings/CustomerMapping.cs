@@ -1,7 +1,6 @@
 ﻿using shoniz.Framework.Persistance;
 using shoniz.shop.CustomerContext.Domain.Customers;
 using System.Data;
-using System.Data.Entity.ModelConfiguration;
 
 namespace shoniz.shop.CustomerContext.Infrastructure.Persistance.Customers.Mappings
 {

@@ -56,6 +56,10 @@
     <Compile Include="Migrations\202202130606119_CustomerAggrigteAdded.designer.cs">
       <DependentUpon>202202130606119_CustomerAggrigteAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202130644276_TelephoneRenamedToCelphone.cs" />
+    <Compile Include="Migrations\202202130644276_TelephoneRenamedToCelphone.designer.cs">
+      <DependentUpon>202202130644276_TelephoneRenamedToCelphone.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ShopDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +85,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202202130606119_CustomerAggrigteAdded.resx">
       <DependentUpon>202202130606119_CustomerAggrigteAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202130644276_TelephoneRenamedToCelphone.resx">
+      <DependentUpon>202202130644276_TelephoneRenamedToCelphone.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

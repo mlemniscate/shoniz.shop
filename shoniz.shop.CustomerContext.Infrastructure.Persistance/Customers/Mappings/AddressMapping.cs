@@ -19,7 +19,7 @@ namespace shoniz.shop.CustomerContext.Infrastructure.Persistance.Customers.Mappi
                 .HasColumnType(SqlDbType.VarChar.ToString())
                 .HasMaxLength(30)
                 .IsOptional();
-            Property(a => a.Telephone)
+            Property(a => a.Celphone)
                 .HasColumnType(SqlDbType.NVarChar.ToString())
                 .HasMaxLength(20)
                 .IsOptional();

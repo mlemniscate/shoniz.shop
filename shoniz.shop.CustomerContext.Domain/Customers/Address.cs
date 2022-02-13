@@ -21,7 +21,7 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
 
         public Guid CustomerId { get; private set; }
 
-        public string Telephone { get; set; }
+        public string Celphone { get; set; }
 
         public string Coordinate { get; set; }
 
