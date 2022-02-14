@@ -49,6 +49,11 @@
     <Compile Include="Security\IHashProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\shoniz.Framework.Domain\shoniz.Framework.Domain.csproj">
+      <Project>{D7685446-EFD6-45E9-A0A4-8BBE3C6505D8}</Project>
+      <Name>shoniz.Framework.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

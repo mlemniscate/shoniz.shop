@@ -12,6 +12,7 @@ using shoniz.shop.CustomerContext.Domain.Services.Customers;
 using shoniz.shop.CustomerContext.Facade;
 using shoniz.shop.CustomerContext.Infrastructure.Persistance.Customers;
 using shoniz.shop.CustomerContext.Infrastructure.Persistance.Customers.Mappings;
+using shoniz.shop.Persistence;
 using Shoniz.Framework.ApplicationService;
 
 namespace shoniz.Shop.CustomerContext.Configuration
@@ -24,6 +25,13 @@ namespace shoniz.Shop.CustomerContext.Configuration
                 Component
                 .For<IHashProvider>()
                 .ImplementedBy<HashProvider>()
+                .LifestyleSingleton()
+                );
+
+            container.Register(
+                Component
+                .For<IDbContext>()
+                .ImplementedBy<ShopDbContext>()
                 .LifestyleSingleton()
                 );
 
@@ -58,7 +66,7 @@ namespace shoniz.Shop.CustomerContext.Configuration
             container.Register(
                 Classes
                 .FromAssemblyContaining<CustomerRepository>()
-                .BasedOn<IRepository>()
+                .BasedOn(typeof(IRepository<>))
                 .WithServiceAllInterfaces()
                 .LifestyleTransient());
         }

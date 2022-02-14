@@ -4,13 +4,14 @@ using shoniz.shop.CustomerContext.Domain.Customers.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace shoniz.shop.CustomerContext.Domain.Customers
 {
-    public class Customer : EntityBase
+    public class Customer : EntityBase, IAggregateRoot<Customer>
     {
         private readonly INationalCodeDuplicationChecker nationalCodeDuplicateChecker;
         private readonly IHashProvider hashProvider;
@@ -33,6 +34,10 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
             
         }
 
+        public Customer()
+        {
+        }
+
         public string NationalCode { get; private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
@@ -43,6 +48,11 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
         public void AddAddress(Address address)
         {
             Addresses.Add(address);
+        }
+
+        public IEnumerable<Expression<Func<Customer, object>>> GetAggregateExpressions()
+        {
+            yield return c => c.Addresses;
         }
 
         private void SetNationalCode(string nationalCode)
@@ -103,5 +113,7 @@ namespace shoniz.shop.CustomerContext.Domain.Customers
             }
             Password = hashProvider.Hash(password, Id.ToString());
         }
+
+        
     }
 }

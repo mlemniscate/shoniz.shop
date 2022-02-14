@@ -65,6 +65,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\shoniz.Framework.Persistance\shoniz.Framework.Persistance.csproj">
+      <Project>{2AC81CF9-7FD4-4185-84D6-02A8E3AC1689}</Project>
+      <Name>shoniz.Framework.Persistance</Name>
+    </ProjectReference>
     <ProjectReference Include="..\shoniz.shop.Persistence\shoniz.shop.Persistence.csproj">
       <Project>{BEEB7B9F-E3FE-4074-93DA-06FFE5AEDD5D}</Project>
       <Name>shoniz.shop.Persistence</Name>

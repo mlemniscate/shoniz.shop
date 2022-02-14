@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace shoniz.shop.CustomerContext.Domain.Customers.Services
 {
-    public interface ICustomerRepository : IRepository
+    public interface ICustomerRepository : IRepository<Customer>
     {
         void CreateCustomer(Customer customer);
 
