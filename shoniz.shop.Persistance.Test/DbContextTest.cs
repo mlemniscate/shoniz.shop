@@ -10,7 +10,6 @@ namespace shoniz.shop.Persistance.Test
         [TestMethod]
         public void DetectMappingClasses()
         {
-            var mappings = ShopDbContext.DetectEntityMappings();
         }
     }
 }

@@ -45,6 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\shoniz.Framework.Core\shoniz.Framework.Core.csproj">
+      <Project>{CBE9861E-4A61-48DF-9F94-570EBDA530C0}</Project>
+      <Name>shoniz.Framework.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\shoniz.Framework.Domain\shoniz.Framework.Domain.csproj">
       <Project>{D7685446-EFD6-45E9-A0A4-8BBE3C6505D8}</Project>
       <Name>shoniz.Framework.Domain</Name>

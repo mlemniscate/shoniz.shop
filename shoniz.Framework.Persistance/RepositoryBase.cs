@@ -25,7 +25,7 @@ namespace shoniz.Framework.Persistance
                 {
                     set = set.Include(expression);
                 }
-                return set;
+                return (DbSet<TAggregateRoot>)set;
             }
         }
 
