@@ -7,6 +7,7 @@ using System.Linq;
 
 namespace shoniz.shop.Persistence
 {
+
     public class ShopDbContext : DbContextBase
     {
         public ShopDbContext() : base(ConfigurationManager.ConnectionStrings["Shop"].ConnectionString)

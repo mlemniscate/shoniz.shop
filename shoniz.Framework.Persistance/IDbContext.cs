@@ -1,6 +1,8 @@
-﻿namespace shoniz.Framework.Persistance
+﻿using System;
+
+namespace shoniz.Framework.Persistance
 {
-    public interface IDbContext
+    public interface IDbContext : IDisposable
     {
         int SaveChanges();
     }

@@ -42,13 +42,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandBus.cs" />
+    <Compile Include="ExceptionControlingCommandHandler.cs" />
     <Compile Include="ICommandHandler.cs" />
+    <Compile Include="LogCommandHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransactionalCommandHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\shoniz.Framework.Core\shoniz.Framework.Core.csproj">
       <Project>{CBE9861E-4A61-48DF-9F94-570EBDA530C0}</Project>
       <Name>shoniz.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\shoniz.Framework.Persistance\shoniz.Framework.Persistance.csproj">
+      <Project>{2AC81CF9-7FD4-4185-84D6-02A8E3AC1689}</Project>
+      <Name>shoniz.Framework.Persistance</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
