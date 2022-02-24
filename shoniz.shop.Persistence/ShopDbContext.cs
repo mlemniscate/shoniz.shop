@@ -10,7 +10,7 @@ namespace shoniz.shop.Persistence
 
     public class ShopDbContext : DbContextBase
     {
-        public ShopDbContext() : base(ConfigurationManager.ConnectionStrings["Shop"].ConnectionString)
+        public ShopDbContext() : base("Data Source=DESKTOP-KLKNGN9;Initial Catalog=MiladShop;Integrated Security=True")
         {
 
         }
@@ -25,5 +25,6 @@ namespace shoniz.shop.Persistence
                 .ToList();
             return entityMappings;
         }
+
     }
 }

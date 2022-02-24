@@ -18,7 +18,7 @@ namespace Shoniz.Framework.ApplicationService
             {
                 commandHandler.Execute(command);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // handle exception
             }

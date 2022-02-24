@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BEEB7B9F-E3FE-4074-93DA-06FFE5AEDD5D}</ProjectGuid>
+    <ProjectGuid>{27C8C48B-CA4F-47B5-9D9E-F0C6BC61EE71}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>shoniz.shop.Persistence</RootNamespace>
-    <AssemblyName>shoniz.shop.Persistence</AssemblyName>
+    <RootNamespace>shoniz.shop.ReadModel.Queries.Facade</RootNamespace>
+    <AssemblyName>shoniz.shop.ReadModel.Queries.Facade</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -42,7 +42,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,46 +51,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202202130606119_CustomerAggrigteAdded.cs" />
-    <Compile Include="Migrations\202202130606119_CustomerAggrigteAdded.designer.cs">
-      <DependentUpon>202202130606119_CustomerAggrigteAdded.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202130644276_TelephoneRenamedToCelphone.cs" />
-    <Compile Include="Migrations\202202130644276_TelephoneRenamedToCelphone.designer.cs">
-      <DependentUpon>202202130644276_TelephoneRenamedToCelphone.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="ShopDbContext.cs" />
+    <Compile Include="Customers\CustomerQueryFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\shoniz.shop.ReadModel.Context\shoniz.shop.ReadModel.Context.csproj">
+      <Project>{4a2d7061-65a5-48f6-a654-567aef24ce57}</Project>
+      <Name>shoniz.shop.ReadModel.Context</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\shoniz.shop.ReadModel.Queries.Contracts\shoniz.shop.ReadModel.Queries.Contracts.csproj">
+      <Project>{8D0F653E-D3BF-4E47-8C0E-F11DF403C3F2}</Project>
+      <Name>shoniz.shop.ReadModel.Queries.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\shoniz.Framework.Core\shoniz.Framework.Core.csproj">
-      <Project>{cbe9861e-4a61-48df-9f94-570ebda530c0}</Project>
-      <Name>shoniz.Framework.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\shoniz.Framework.Persistance\shoniz.Framework.Persistance.csproj">
-      <Project>{2AC81CF9-7FD4-4185-84D6-02A8E3AC1689}</Project>
-      <Name>shoniz.Framework.Persistance</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\shoniz.shop.CustomerContext.Infrastructure.Persistance\shoniz.shop.CustomerContext.Infrastructure.Persistance.csproj">
-      <Project>{8A8B7190-DC92-414D-A9A4-8CAEF0EB1F4C}</Project>
-      <Name>shoniz.shop.CustomerContext.Infrastructure.Persistance</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202202130606119_CustomerAggrigteAdded.resx">
-      <DependentUpon>202202130606119_CustomerAggrigteAdded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202130644276_TelephoneRenamedToCelphone.resx">
-      <DependentUpon>202202130644276_TelephoneRenamedToCelphone.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
