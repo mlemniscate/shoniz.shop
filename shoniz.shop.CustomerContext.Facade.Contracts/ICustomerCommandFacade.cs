@@ -7,5 +7,6 @@ namespace shoniz.shop.CustomerContext.Facade
         void AddAddress(AddAddressCommand command);
 
         void Signup(SignupCommand command);
+
     }
 }
